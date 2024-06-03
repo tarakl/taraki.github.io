@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo</title>
+    <link rel="stylesheet" type="text/css" href="D:\Proyecto_2\Calculo\calculo.CSS">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <h1>Tipos de energia asequibles</h1>
+    <br>
+    <p> Los diferentes tipos de energía asequibles incluyen la energía solar, eólica, hidroeléctrica y de biomasa. La energía solar aprovecha la luz del sol para generar electricidad, mientras que la energía eólica utiliza la fuerza del viento. La energía
+        hidroeléctrica se genera a partir del flujo de agua en presas, y la energía de biomasa proviene de materiales orgánicos como residuos agrícolas o forestales. Cada una tiene ventajas y desventajas en términos de disponibilidad, impacto ambiental
+        y costos operativos. Por ejemplo, la solar y la eólica son renovables y tienen bajo impacto ambiental, pero la disponibilidad depende de factores como el clima. La hidroeléctrica también es renovable pero puede afectar los ecosistemas acuáticos.
+        La biomasa puede ser menos predecible y puede tener implicaciones en la seguridad alimentaria si compite con la producción de alimentos. La elección entre ellas depende de factores como la ubicación geográfica, la infraestructura existente y las
+        políticas gubernamentales.
+    </p>
+    <br>
+    <p><strong> Energía Solar</strong> íamos usar una función sinusoidal para representar la variación de la energía solar a lo largo del día, donde la altura del sol en el cielo afecta la cantidad de energía recibida.
+        <br>
+        <p>Funcion: \( E(t) = A \cdot \sin(\omega t) \)</p>
+        <br>
+        <p>Donde:</p>
+        <p>
+            - \( E(t) \) es la energía solar en función del tiempo. - \( A \) es la amplitud de la función, que representa la máxima energía solar. - \( \omega \) es la frecuencia angular que determina la rapidez con la que la energía solar cambia con el tiempo.
+            - \( t \) es el tiempo.
+        </p>
+
+
+        2.<strong> Energía Eolica</strong> Podríamos usar una función exponencial o logística para modelar la producción de energía eólica en función de la velocidad del viento.
+        <br> Función: \( E(v) = \frac{a}{1 + e^{-bv}} \)
+        <br>
+        <p> Donde:</p>
+        <p>
+            - \( E(v) \) es la energía eólica generada en función de la velocidad del viento \( v \). - \( a \) y \( b \) son constantes que determinan la forma de la curva.
+        </p>
+
+
+        3. <strong> Energía hidroeléctrica</strong> Podríamos utilizar una función lineal que relacione la altura del agua en una presa con la energía generada.
+        <br> Función: \( E(h) = m \cdot h + b \)
+        <br>
+        <p>Donde:</p>
+        <p>
+            - \( E(h) \) es la energía hidroeléctrica generada en función de la altura del agua \( h \). - \( m \) es la pendiente de la función, que representa la eficiencia de la generación de energía. - \( b \) es la intersección en el eje \( y \), que representa
+            la energía base generada sin altura de agua.
+        </p>
+
+
+        4. <strong> Energía Biomasa</strong> Podríamos usar una función logarítmica que represente la relación entre la cantidad de biomasa utilizada y la energía producida.
+        <br> Función: \( E(b) = c \cdot \ln(b) \)
+        <br>
+        <p>Donde:</p>
+        <p>
+            - \( E(b) \) es la energía de biomasa generada en función de la cantidad de biomasa utilizada \( b \). - \( c \) es una constante que determina la tasa de conversión de biomasa en energía.
+        </p>
+        Estas son solo representaciones simplificadas y las funciones reales pueden ser mucho más complejas y depender de una variedad de factores adicionales.
+    </p>
+    <br>
+    <canvas id="myChart" width="400" height="200"></canvas>
+
+    <script>
+        // Datos para la gráfica
+        var datos = {
+            labels: ["Energía Solar", "Energía Eólica", "Energía Hidroeléctrica", "Biomasa", "Energía Geotérmica"],
+            datasets: [{
+                label: "Tipos de Energías Asequibles",
+                data: [60, 50, 40, 30, 20], // Datos de la asequibilidad de cada tipo de energía
+                backgroundColor: [
+                    'rgba(fd0a0a)', // Color de fondo de la primera barra (Energía Solar)
+                    'rgba(054fee)', // Color de fondo de la segunda barra (Energía Eólica)
+                    'rgba(#fffb11)', // Color de fondo de la tercera barra (Energía Hidroeléctrica)
+                    'rgba(#009165)', // Color de fondo de la cuarta barra (Biomasa)
+                    'rgba(#413f70)' // Color de fondo de la quinta barra (Energía Geotérmica)
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)', // Color del borde de la primera barra (Energía Solar)
+                    'rgba(54, 162, 235, 1)', // Color del borde de la segunda barra (Energía Eólica)
+                    'rgba(255, 206, 86, 1)', // Color del borde de la tercera barra (Energía Hidroeléctrica)
+                    'rgba(75, 192, 192, 1)', // Color del borde de la cuarta barra (Biomasa)
+                    'rgba(153, 102, 255, 1)' // Color del borde de la quinta barra (Energía Geotérmica)
+                ],
+                borderWidth: 1 // Ancho del borde de las barras
+            }]
+        };
+
+        // Configuración de la gráfica
+        var opciones = {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true // Comienza el eje Y en 0
+                    }
+                }]
+            }
+        };
+
+        // Obtén el contexto del lienzo (canvas) donde se dibujará la gráfica
+        var ctx = document.getElementById('myChart').getContext('2d');
+
+        // Crea la gráfica
+        var myChart = new Chart(ctx, {
+            type: 'bar', // Tipo de gráfica (en este caso, de barras)
+            data: datos, // Datos de la gráfica
+            options: opciones // Opciones de configuración de la gráfica
+        });
+    </script>
+</body>
+<br></br>
+<a href="D:\Proyecto_2\Menu\Proyecto_Transversal.html">
+    <button>Ir a la página principal</button>
+    <br>
+</a>
+
+</html>

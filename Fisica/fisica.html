@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisica</title>
+</head>
+
+<body>
+   
+    </style>
+    </head>
+
+    <body>
+        <div class="slider-container">
+            <div class="slider">
+                <img src=https://i.pinimg.com/originals/9b/55/25/9b5525f55758313374f2dda9173681ba.gif alt="GIF 1" width="250" heigth="150">
+                <img src=https://i.pinimg.com/originals/2d/84/e4/2d84e4a0f7673b4fc5578875f3136f9c.gif alt="GIF 2" width="250" heigth="150">
+                <img src=https://i.pinimg.com/originals/4e/8d/63/4e8d6334f686495aecafcc738e25092d.gif alt="GIF 3" width="250" heigth="150">
+                <img src=https://i.pinimg.com/originals/3d/48/88/3d4888977b35583f7cd046d440f936ef.gif alt="GIF 4" width="250" heigth="150">
+                <img src=https://i.pinimg.com/originals/6f/33/4f/6f334fd3bd486011c4efa1e93f366ec8.gif alt="GIF 5" width="250" heigth="150">
+                <img src=https://i.pinimg.com/originals/9b/55/25/9b5525f55758313374f2dda9173681ba.gif alt="GIF 6" width="250" heigth="150">
+                <img src=https://i.pinimg.com/originals/4e/8d/63/4e8d6334f686495aecafcc738e25092d.gif alt="GIF 7" width="250" heigth="150">
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                let slideIndex = 0;
+                const slides = document.querySelectorAll(".slider img");
+                const totalSlides = slides.length;
+                const slider = document.querySelector(".slider");
+                const slideWidth = slides[0].clientWidth;
+
+                function nextSlide() {
+                    slideIndex = (slideIndex + 1) % totalSlides;
+                    updateSlider();
+                }
+
+                function updateSlider() {
+                    const offset = -slideIndex * slideWidth;
+                    slider.style.transform = `translateX(${offset}px)`;
+                }
+
+                setInterval(nextSlide, 4000); // Cambia de imagen cada 4 segundos
+            });
+        </script>
+        <h1><strong>Tipos de energia</strong></h1>
+        <ul>
+            <li>
+                <h3>Energia calorifica</h3>
+                <p> Se produce por la combustión de materiales como; madera, petróleo, gas natural, entre otros.Con energía calorífica puedes calentar cualquier cosa.</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIDNjBuE9hagVlP1APflTYt7HQ82EQHjcFunfqR8sbyw&s" width="150" height="150">
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h3>Energía Eléctrica</h3>
+                <p>Se produce cuando a través de un material conductor se logra un movimiento o flujo de electrones.La corriente eléctrica genera luz, calor y magnetismo. La corriente eléctrica también se siente cuando pasa por nuestro cuerpo.
+                </p>
+                <img src="https://www.bbva.com/wp-content/uploads/2021/02/energi%CC%81a_electrica-1920x1180.jpg" width="150" height="150">
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h3>Energía Química</h3>
+                <p>Se produce cuando las sustancias reaccionan entre sí alterando su constitución íntima, como es el caso de la energía obtenida en los explosivos. Este tipo de energía puede ser destructiva.
+                </p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdE8KyROe9gViUkRzIs5HcTfowz5ccOzv7uG6ix5ffZQ&s" width="150" height="150">
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h3>Energía Hidráulica</h3>
+                <p>Se aprovecha cuando la corriente de agua mueve un molino o también cuando la caída de agua de una presa mueve una turbina. Este tipo de energía es utilizada para generar energía eléctrica.
+                </p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV--bZDKEPL6fOpuCL7vXTmDuRdK4dasTI4tGB_Og5Sw&s" width="150" height="150">
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h3>Energía Eólica</h3>
+                <p>Es la producida por el movimiento del aire y se aprovecha en los molinos de viento o en los aerogeneradores de alta potencia para producir electricidad.Este tipo de energía se aprovecha para extraer agua del subsuelo.</p>
+                <img src="https://www.iberdrola.com/documents/20125/40918/Renovables_746x419.jpeg/171c88c6-834d-5309-0e0e-f758530dc3a9?t=1627967517593" width="150" height="150">
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h3>Energía Radiante</h3>
+                <p>
+                    Es la energía producida por ondas electromagnéticas que se caracterizan por su propagación en el vacío a una velocidad de 3.0x10´8 M/S, tal es el caso de los rayos X, ultravioleta, infrarrojos y luminosos. Este tipo de energía se aplica en radiología.
+
+                </p>
+                <img src="https://www.repsol.com/content/dam/repsol-corporate/es/energia-e-innovacion/espectro-electromagnetico-energia-radiante.jpg" width="150" height="150">
+            </li>
+        </ul>
+
+    </body>
+    <a href="D:\Proyecto_2\Menu\Proyecto_Transversal.html">
+        <button>Ir a la página principal</button>
+    </a>
+
+</html>

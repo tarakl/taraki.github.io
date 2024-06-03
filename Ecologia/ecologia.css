@@ -1,0 +1,27 @@
+body {
+    background-image: url("https://i.pinimg.com/736x/65/92/97/659297ca340413f1afa03127cb196de2.jpg");
+    background-color: rgb(136, 252, 207);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif border-top: rgb(175, 0, 219) 5px dashed;
+    border-top: black 5px dashed;
+    border-right: green 10px double;
+    border-bottom: blue 10px dotted;
+    border-left: red 5px solid;
+}
+
+h3 {
+    border: rgb(6, 184, 110) 8px double;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button {
+    background-color: #199319;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #223094;
+}

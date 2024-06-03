@@ -1,0 +1,33 @@
+body {
+    background-image: url("https://i.pinimg.com/564x/c3/af/92/c3af9272979ba5277195300be4e7312b.jpg");
+    background-color: rgb(243, 201, 214);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+button {
+    background-color: #aeaaf0;
+    color: rgb(0, 0, 0);
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b5e7ee;
+}
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 250PX;
+    height: auto;
+}
